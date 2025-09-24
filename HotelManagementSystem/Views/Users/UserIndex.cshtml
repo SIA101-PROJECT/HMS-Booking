@@ -1,0 +1,549 @@
+﻿
+@{
+    ViewBag.Title = "Home";
+    Layout = "~/Views/Shared/UserMaster.cshtml";
+}
+
+<link rel="stylesheet" href="~/Content/styleLandingPageContents.css" />
+
+<!-- HOME CONTENT -->
+<main class="home-content" id="home">
+    <div class="content-left">
+        <h1 class="home-title">
+            <span>Experience</span><br>
+            <span style="color: #4a5565">More with Us!</span>
+        </h1>
+        <p>
+            Discover luxury and comfort in every corner of our premium hotel. Your perfect gateway awaits with world-class amenities and exceptional service.
+        </p>
+        <a href="#" class="btn-primary" id="bookNowBtn">Book Now!</a>
+    </div>
+
+    <div class="content-right">
+        <!-- image -->
+        <div class="image-placeholder">
+            <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?q=80&w=1200&auto=format&fit=crop" />
+        </div>
+
+        <!-- popup card -->
+        <div class="popup-card">
+            <h4>About Us</h4>
+            <p>
+                Experience luxury hospitality with our world-class amenities, exceptional service, and prime location in the heart of the city.
+            </p>
+        </div>
+    </div>
+</main>
+
+<!-- GALLERY CONTENT -->
+<main class="gallery-content">
+    <h1>Our Gallery</h1>
+    <p>
+        Explore the elegance and sophistication of our hotel through these carefully curated images
+    </p>
+
+    <!-- gallery container -->
+    <div class="gallery-container">
+        <img src="https://images.unsplash.com/photo-1551882547-ff40c63fe5fa?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80"
+             alt="Gallery 0 Front" class="gallery-main-image" id="galleryMainImage">
+
+        <!-- navigation buttons -->
+        <button class="gallery-nav prev" id="prevBtn" style="left: 1.25rem;">‹</button>
+        <button class="gallery-nav next" id="nextBtn" style="right: 1.25rem;">›</button>
+    </div>
+
+    <!-- thumbnail gallery -->
+    <div class="thumbnail-container">
+        <div class="thumbnail active" data-index="0">
+            <img src="https://images.unsplash.com/photo-1551882547-ff40c63fe5fa?ixlib=rb-4.0.3&auto=format&fit=crop&w=200&q=80" alt="Gallery 0">
+        </div>
+        <div class="thumbnail" data-index="1">
+            <img src="https://images.unsplash.com/photo-1566073771259-6a8506099945?ixlib=rb-4.0.3&auto=format&fit=crop&w=200&q=80" alt="Gallery 1">
+        </div>
+        <div class="thumbnail" data-index="2">
+            <img src="https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?ixlib=rb-4.0.3&auto=format&fit=crop&w=200&q=80" alt="Gallery 2">
+        </div>
+        <div class="thumbnail" data-index="3">
+            <img src="https://images.unsplash.com/photo-1571896349842-33c89424de2d?ixlib=rb-4.0.3&auto=format&fit=crop&w=200&q=80" alt="Gallery 3">
+        </div>
+        <div class="thumbnail" data-index="4">
+            <img src="https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?ixlib=rb-4.0.3&auto=format&fit=crop&w=200&q=80" alt="Gallery 4">
+        </div>
+    </div>
+
+    <!-- pagination dots -->
+    <div class="pagination-dots">
+        <div class="dot active" data-index="0"></div>
+        <div class="dot" data-index="1"></div>
+        <div class="dot" data-index="2"></div>
+        <div class="dot" data-index="3"></div>
+        <div class="dot" data-index="4"></div>
+    </div>
+</main>
+
+<!-- FACILITIES CONTENT -->
+<main class="facilities-content" id="facilities">
+    <div class="facilities-header">
+        <h1>Facilities</h1>
+        <p>
+            Discover our world-class amenities designed to make your stay exceptional and memorable
+        </p>
+    </div>
+
+    <!-- facilities grid -->
+    <div class="facilities-grid">
+        <!-- pool -->
+        <div class="facility-card">
+            <img src="https://images.unsplash.com/photo-1571896349842-33c89424de2d?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Pool">
+            <div class="facility-text-placeholder">
+                <div class="facility-text-placeholder_1">
+                    <div class="facilities-icons"><i class="fa-solid fa-water"></i></div>
+                    <h3 class="facility-card-title">Pool</h3>
+                </div>
+                <p class="facility-card-text">Olympic-size swimming pool with panoramic city views</p>
+            </div>
+        </div>
+
+        <!-- gym -->
+        <div class="facility-card">
+            <img src="https://images.unsplash.com/photo-1534438327276-14e5300c3a48?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Gym">
+            <div class="facility-text-placeholder">
+                <div class="facility-text-placeholder_1">
+                    <div class="facility-icons"><i class="fas fa-dumbbell"></i></div>
+                    <h3 class="facility-card-title">Gym</h3>
+                </div>
+                <p class="facility-card-text">State-of-the-art fitness center with modern equipment</p>
+            </div>
+        </div>
+
+        <!-- meeting rooms -->
+        <div class="facility-card">
+            <img src="https://plus.unsplash.com/premium_photo-1670315267653-2adecd823d9e?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Meeting Rooms">
+            <div class="facility-text-placeholder">
+                <div class="facility-text-placeholder_1">
+                    <div class="facility-icons"><i class="fas fa-people-group"></i></div>
+                    <h3 class="facility-card-title">Meeting Rooms</h3>
+                </div>
+                <p class="facility-card-text">Professional meeting rooms for business events</p>
+            </div>
+        </div>
+
+        <!-- parking -->
+        <div class="facility-card">
+            <img src="https://images.unsplash.com/photo-1604063155785-ee4488b8ad15?q=80&w=1169&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Parking">
+            <div class="facility-text-placeholder">
+                <div class="facility-text-placeholder_1">
+                    <div class="facility-icons"><i class="fas fa-car"></i></div>
+                    <h3 class="facility-card-title">Parking</h3>
+                </div>
+                <p class="facility-card-text">Secure underground parking with valet service</p>
+            </div>
+        </div>
+
+        <!-- lobby area -->
+        <div class="facility-card">
+            <img src="https://images.unsplash.com/photo-1564013799919-ab600027ffc6?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Lobby">
+            <div class="facility-text-placeholder">
+                <div class="facility-text-placeholder_1">
+                    <div class="facility-icons"><i class="fas fa-building"></i></div>
+                    <h3 class="facility-card-title">Lobby Area</h3>
+                </div>
+                <p class="facility-card-text">Elegant lounge space for relaxation and meetings</p>
+            </div>
+        </div>
+
+        <!-- food and beverages -->
+        <div class="facility-card">
+            <img src="https://images.unsplash.com/photo-1469631423273-6995642a6a40?q=80&w=1203&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Restaurant">
+            <div class="facility-text-placeholder">
+                <div class="facility-text-placeholder_1">
+                    <div class="facility-icons"><i class="fas fa-utensils"></i></div>
+                    <h3 class="facility-card-title">Food and Beverages</h3>
+                </div>
+                <p class="facility-card-text">Fine dining restaurant with international cuisine</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- we also offer section -->
+    <div class="facilities-offer-section">
+        <div class="facilities-offer-section_1">
+            <h2>We Also Offer</h2>
+            <p>Additional services to enhance your experience</p>
+        </div>
+
+        <!-- additional services grid -->
+        <div class="services-grid">
+            <!-- free wifi -->
+            <div class="service-item">
+                <div class="service-item-icons"><i class="fas fa-wifi"></i></div>
+                <h3>Free WiFi</h3>
+                <p>High-speed internet throughout the property</p>
+            </div>
+
+            <!-- airport aransfer -->
+            <div class="service-item">
+                <div class="service-item-icons"><i class="fas fa-shuttle-van"></i></div>
+                <h3>Airport Transfer</h3>
+                <p>Complimentary shuttle service to and from airport</p>
+            </div>
+
+            <!-- concierge service -->
+            <div class="service-item">
+                <div class="service-item-icons"><i class="fas fa-concierge-bell"></i></div>
+                <h3>Concierge Service</h3>
+                <p>24/7 assistance for all your needs</p>
+            </div>
+
+            <!-- pet friendly rooms -->
+            <div class="service-item">
+                <div class="service-item-icons"><i class="fas fa-paw"></i></div>
+                <h3>Pet Friendly Rooms</h3>
+                <p>Comfortable accommodation for your furry friends</p>
+            </div>
+        </div>
+
+        <hr />
+
+        <!-- additional services columns -->
+        <div class="services-columns">
+            <!-- room service -->
+            <div class="service-column">
+                <h3>Room Service</h3>
+                <ul>
+                    <li style="margin-bottom: 0.5rem;">24/7 in-room dining</li>
+                    <li style="margin-bottom: 0.5rem;">Housekeeping service</li>
+                    <li style="margin-bottom: 0.5rem;">Laundry & dry cleaning</li>
+                </ul>
+            </div>
+
+            <!-- non-smoking rooms -->
+            <div class="service-column">
+                <h3>Non-Smoking Rooms</h3>
+                <ul>
+                    <li style="margin-bottom: 0.5rem;">Air purification system</li>
+                    <li style="margin-bottom: 0.5rem;">Fresh air circulation</li>
+                    <li style="margin-bottom: 0.5rem;">Allergen-free environment</li>
+                </ul>
+            </div>
+
+            <!-- luggage storage -->
+            <div class="service-column">
+                <h3>Luggage Storage</h3>
+                <ul>
+                    <li style="margin-bottom: 0.5rem;">Secure storage facility</li>
+                    <li style="margin-bottom: 0.5rem;">24/7 access available</li>
+                    <li style="margin-bottom: 0.5rem;">Complimentary service</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</main>
+
+<!-- ROOMS CONTENT -->
+<main class="rooms-content" id="rooms">
+    <div class="rooms-header">
+        <h1>Our Rooms and Suites</h1>
+        <p>
+            Choose from our selection of elegantly appointed rooms and suites, each designed for maximum comfort and luxury
+        </p>
+    </div>
+
+    <!-- rooms grid -->
+    <div class="rooms-grid">
+        <!-- deluxe room -->
+        <div class="room-card">
+            <div class="room-card-image-placeholder">
+                <img src="https://images.unsplash.com/photo-1631049307264-da0ec9d70304?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Deluxe Room">
+                <div>$50 Off</div>
+            </div>
+            <div class="room-card-info">
+                <h3>Deluxe Room</h3>
+                <p>Spacious room with modern amenities and city views</p>
+
+                <!-- room details -->
+                <div class="room-card-details">
+                    <div>
+                        <span><i class="fa-solid fa-user-group"></i></span> 2 guests
+                    </div>
+                    <div>
+                        <span><i class="fa-solid fa-bed"></i></span> 1 bed
+                    </div>
+                    <div>
+                        <span><i class="fa-solid fa-bath"></i></span> 1 bath
+                    </div>
+                </div>
+
+                <!-- amenities -->
+                <div class="room-category">
+                    <span>Free WiFi</span>
+                    <span>Room Service</span>
+                    <span>Air Conditioning</span>
+                </div>
+
+                <!-- price and booking -->
+                <div class="room-price-booking">
+                    <div>
+                        <span class="room-price">$200</span>
+                        <span class="room-price-crossed">$250</span>
+                        <span class="room-per-night">per night</span>
+                    </div>
+                    <button id="book_btn_1">Book Now</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- executive suite -->
+        <div class="room-card">
+            <div class="room-card-image-placeholder">
+                <img src="https://images.unsplash.com/photo-1618773928121-c32242e63f39?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Executive Suite">
+                <div>$50 Off</div>
+            </div>
+            <div class="room-card-info">
+                <h3>Executive Suite</h3>
+                <p>Luxurious suite with separate living area and premium amenities</p>
+
+                <!-- room details -->
+                <div class="room-card-details">
+                    <div>
+                        <span><i class="fa-solid fa-user-group"></i></span> 4 guests
+                    </div>
+                    <div>
+                        <span><i class="fa-solid fa-bed"></i></span> 2 beds
+                    </div>
+                    <div>
+                        <span><i class="fa-solid fa-bath"></i></span> 2 baths
+                    </div>
+                </div>
+
+                <!-- amenities -->
+                <div class="room-category">
+                    <span>Premium WiFi</span>
+                    <span>24/7 Service</span>
+                    <span>Balcony</span>
+                </div>
+
+                <!-- price and booking -->
+                <div class="room-price-booking">
+                    <div>
+                        <span class="room-price">$350</span>
+                        <span class="room-price-crossed">$400</span>
+                        <span class="room-per-night">per night</span>
+                    </div>
+                    <button id="book_btn_2">Book Now</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- presidential suite -->
+        <div class="room-card">
+            <div class="room-card-image-placeholder">
+                <img src="https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Presidential Suite">
+                <div>$100 Off</div>
+            </div>
+            <div class="room-card-info">
+                <h3>Presidential Suite</h3>
+                <p>Ultimate luxury experience with personalized service</p>
+
+                <!-- room details -->
+                <div class="room-card-details">
+                    <div>
+                        <span><i class="fa-solid fa-user-group"></i></span> 6 guests
+                    </div>
+                    <div>
+                        <span><i class="fa-solid fa-bed"></i></span> 3 beds
+                    </div>
+                    <div>
+                        <span><i class="fa-solid fa-bath"></i></span> 3 baths
+                    </div>
+                </div>
+
+                <!-- amenities -->
+                <div class="room-category">
+                    <span>Concierge Service</span>
+                    <span>Private Dining</span>
+                    <span>Spa Access</span>
+                </div>
+
+                <!-- price and booking -->
+                <div class="room-price-booking">
+                    <div>
+                        <span class="room-price">$500</span>
+                        <span class="room-price-crossed">$600</span>
+                        <span class="room-per-night">per night</span>
+                    </div>
+                    <button id="book_btn_3">Book Now</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- all rooms include section -->
+    <div class="rooms-include">
+        <h2>All Rooms Include</h2>
+    </div>
+
+    <!-- room amenities grid -->
+    <div class="room-amenities-grid">
+        <!-- free wifi -->
+        <div class="amenity-item">
+            <div class="amenity-item-icons"><i class="fas fa-wifi"></i></div>
+            <h4>Free WiFi</h4>
+            <p>High-speed internet throughout the property</p>
+        </div>
+
+        <!-- coffee maker -->
+        <div class="amenity-item">
+            <div class="amenity-item-icons"><i class="fas fa-mug-hot"></i></div>
+            <h4>Coffee Maker</h4>
+            <p>Fresh coffee anytime you want</p>
+        </div>
+
+        <!-- parking -->
+        <div class="amenity-item">
+            <div class="amenity-item-icons"><i class="fas fa-van-shuttle"></i></div>
+            <h4>Parking</h4>
+            <p>Complimentary parking for all guests</p>
+        </div>
+
+        <!-- premium bath -->
+        <div class="amenity-item">
+            <div class="amenity-item-icons"><i class="fas fa-bath"></i></div>
+            <h4>Premium Bath</h4>
+            <p>Luxury bathroom with premium amenities</p>
+        </div>
+
+        <!-- luxury bedding -->
+        <div class="amenity-item">
+            <div class="amenity-item-icons"><i class="fas fa-bed"></i></div>
+            <h4>Luxury Bedding</h4>
+            <p>Premium linens for the perfect sleep</p>
+        </div>
+
+        <!-- 24/7 service -->
+        <div class="amenity-item">
+            <div class="amenity-item-icons"><i class="fa-solid fa-user-group"></i></div>
+            <h4>24/7 Service</h4>
+            <p>Round-the-clock assistance available</p>
+        </div>
+    </div>
+</main>
+
+<!-- CONTACT CONTENT -->
+<main class="contact-content" id="contact">
+    <div class="contact-header">
+        <h1>Contact Us</h1>
+        <p>
+            We'd love to hear your feedback. Please email with us.
+        </p>
+    </div>
+
+    <div class="get-email">
+        <!-- get in touch section -->
+        <div class="get-in-touch">
+            <h2 class="get-in-touch-title">Get In Touch</h2>
+            <p class="get-in-touch-text">
+                Our dedicated team is here to assist you with any inquiries, reservations, or special requests. We're committed to making your experience exceptional.
+            </p>
+
+            <!-- contact info items -->
+            <div class="contact-info-items">
+                <!-- address -->
+                <div class="contact-info-title">
+                    <div class="contact-info-icons">
+                        <span><i class="fa-solid fa-location-dot"></i></span>
+                    </div>
+                    <div>
+                        <h4>Address</h4>
+                        <p>
+                            123 Luxury Avenue<br>
+                            Downtown District<br>
+                            New York, NY 10001
+                        </p>
+                    </div>
+                </div>
+
+                <!-- phone -->
+                <div class="contact-info-title">
+                    <div class="contact-info-icons">
+                        <span><i class="fa-solid fa-phone"></i></span>
+                    </div>
+                    <div>
+                        <h4>Phone</h4>
+                        <p>
+                            +1 (555) 123-4567<br>
+                            +1 (555) 765-4321
+                        </p>
+                    </div>
+                </div>
+
+                <!-- email -->
+                <div class="contact-info-title">
+                    <div class="contact-info-icons">
+                        <span><i class="fa-solid fa-envelope"></i></span>
+                    </div>
+                    <div>
+                        <h4>Email</h4>
+                        <p>
+                            reservations@hotel.com<br>
+                            info@hotel.com
+                        </p>
+                    </div>
+                </div>
+
+                <!-- hours -->
+                <div class="contact-info-title">
+                    <div class="contact-info-icons">
+                        <span><i class="fa-regular fa-clock"></i></span>
+                    </div>
+                    <div>
+                        <h4>Hours</h4>
+                        <p>
+                            Front Desk: 24/7<br>
+                            Concierge: 6:00 AM - 10:00 PM
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- contact form section -->
+        <div class="contact-form">
+            <h2>Send us a Message</h2>
+            <p>We'll get back to you within 24 hours</p>
+
+            <form class="form-send">
+                <!-- name field -->
+                <div>
+                    <label>Your Name *</label>
+                    <input type="text" placeholder="Enter your full name">
+                </div>
+
+                <!-- email field -->
+                <div>
+                    <label>Email Address *</label>
+                    <input type="email" placeholder="Enter your email address">
+                </div>
+
+                <!-- message field -->
+                <div>
+                    <label>Your Message *</label>
+                    <textarea placeholder="Tell us how we can help you..." rows="5"></textarea>
+                </div>
+
+                <!-- submit button -->
+                <button type="submit">Send Message</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- interactive map section -->
+    <div class="map-section">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d964.8069743134527!2d121.03313877126274!3d14.699700258144464!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3397b1705a8be10b%3A0xc493f2d9328064ca!2sQuezon%20City%20University%20-%20San%20Bartolome!5e0!3m2!1sen!2sph!4v1758099077324!5m2!1sen!2sph"
+                allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </div>
+
+
+</main>
+
+<script src="~/Scripts/scriptLandingPageGallery.js"></script>
