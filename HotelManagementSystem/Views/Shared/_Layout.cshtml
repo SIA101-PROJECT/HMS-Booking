@@ -13,7 +13,14 @@
     <!-- navbar -->
     <header class="header">
         <div class="logo">HOTEL</div>
-        <nav class="nav">
+
+        <div class="menu-toggle" id="menuToggle">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+
+        <nav class="nav" id="nav">
             <a href="#home">HOME</a>
             <a href="#facilities">FACILITIES</a>
             <a href="#rooms">ROOMS</a>
@@ -228,6 +235,37 @@
     @Scripts.Render("~/bundles/jquery")
     @Scripts.Render("~/bundles/bootstrap")
     @RenderSection("scripts", required: false)
+
+    <script>
+        // menu toggle
+        const menuToggle = document.getElementById('menuToggle');
+        const nav = document.getElementById('nav');
+
+        menuToggle.addEventListener('click', function () {
+            menuToggle.classList.toggle('active');
+            nav.classList.toggle('active');
+        });
+
+        // close menu when clicked
+        const navLinks = document.querySelectorAll('.nav a');
+        navLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                menuToggle.classList.remove('active');
+                nav.classList.remove('active');
+            });
+        });
+
+        // close menu when clicking outside
+        document.addEventListener('click', function (event) {
+            const isClickInsideNav = nav.contains(event.target);
+            const isClickOnToggle = menuToggle.contains(event.target);
+
+            if (!isClickInsideNav && !isClickOnToggle) {
+                menuToggle.classList.remove('active');
+                nav.classList.remove('active');
+            }
+        });
+    </script>
 
     <script src="~/Scripts/scriptLandingPageSmoothScrolling.js"></script>
     <script src="~/Scripts/scriptLoginRegisterModal.js"></script>
