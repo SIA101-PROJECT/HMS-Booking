@@ -1,0 +1,139 @@
+﻿@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title</title>
+    @Styles.Render("~/Content/css")
+    <link rel="stylesheet" href="~/Content/styleLandingPageNavModalFoot.css" />
+    @Scripts.Render("~/bundles/modernizr")
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+    <!-- navbar -->
+    <header class="header">
+        <div class="logo">HOTEL</div>
+
+        <div class="menu-toggle" id="menuToggle">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+
+        <nav class="nav" id="nav">
+            <a href="#home">HOME</a>
+            <a href="#facilities">FACILITIES</a>
+            <a href="#rooms">ROOMS</a>
+            <a href="#contact">CONTACT</a>
+        </nav>
+        <div class="user-icon" id="userIcon">
+            <a href="#"><i class="fa-solid fa-user"></i></a>
+        </div>
+    </header>
+
+    <div class="container body-content">
+        @RenderBody()
+    </div>
+
+    <!-- footer -->
+    <footer class="footer">
+        <div class="footer-container">
+            <!-- brand section -->
+            <div class="footer-brand">
+                <div class="white-logo"> Hotel</div>
+                <p>Experience More with Us! Discover luxury and comfort in every corner of our premium hotel. Your perfect gateway awaits with world-class amenities and exceptional service.</p>
+                <div class="social-links">
+                    <a href="#" aria-label="Email"><i class="fas fa-envelope"></i></a>
+                    <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                    <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                </div>
+            </div>
+
+            <!-- quick links -->
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <ul class="footer-links">
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#rooms">Rooms & Suites</a></li>
+                    <li><a href="#facilities">Facilities</a></li>
+                    <li><a href="#contact">Contact Us</a></li>
+                </ul>
+            </div>
+
+            <!-- contact information -->
+            <div class="footer-section">
+                <h3>Contact Info</h3>
+                <ul class="contact-info">
+                    <li>
+                        <span class="label">Address</span>
+                        123 Luxury Avenue<br>
+                        New York, NY 10001
+                    </li>
+                    <li>
+                        <span class="label">Phone</span>
+                        +1 (555) 123-4567
+                    </li>
+                    <li>
+                        <span class="label">Email</span>
+                        info@hotel.com
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- footer bottom -->
+        <div class="footer-bottom">
+            <div class="copyright">
+                © 2025 Hotel. All rights reserved.
+            </div>
+            <div class="footer-bottom-links">
+                <a href="#">Privacy Policy</a>
+                <a href="#">Terms of Service</a>
+                <a href="#">Cookie Policy</a>
+            </div>
+        </div>
+    </footer>
+
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+    @RenderSection("scripts", required: false)
+
+    <script>
+        // menu toggle
+        const menuToggle = document.getElementById('menuToggle');
+        const nav = document.getElementById('nav');
+
+        menuToggle.addEventListener('click', function () {
+            menuToggle.classList.toggle('active');
+            nav.classList.toggle('active');
+        });
+
+        // close menu when clicked
+        const navLinks = document.querySelectorAll('.nav a');
+        navLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                menuToggle.classList.remove('active');
+                nav.classList.remove('active');
+            });
+        });
+
+        // close menu when clicking outside
+        document.addEventListener('click', function (event) {
+            const isClickInsideNav = nav.contains(event.target);
+            const isClickOnToggle = menuToggle.contains(event.target);
+
+            if (!isClickInsideNav && !isClickOnToggle) {
+                menuToggle.classList.remove('active');
+                nav.classList.remove('active');
+            }
+        });
+    </script>
+
+    <script src="~/Scripts/scriptLandingPageSmoothScrolling.js"></script>
+</body>
+</html>
